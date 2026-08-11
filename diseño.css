@@ -1,0 +1,333 @@
+/* OJO: no tocar mucho esto pq aqui empieza toda la pagina */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Courier New", monospace;
+    color: #fff;
+    overflow-x: hidden;
+
+    /* aca esta el fondo, si se ve raro revisar estas 2 imagenes */
+    background-color: #18002e;
+    background-image:
+        url("imagenes/Rectangle 14.png"),
+        url("imagenes/e6853188092300401b7252585d372fc1.jpg");
+
+    background-position: center top, center top;
+    background-size: 100% auto, 100% auto;
+    background-repeat: repeat-y, repeat-y;
+    background-attachment: scroll, scroll;
+}
+
+
+/* contenedor de toda la pagina */
+.pagina {
+    width: min(100%, 1164px);
+    min-height: 2200px;
+    margin: 0 auto;
+    padding-bottom: 70px;
+    position: relative;
+}
+
+
+/* =========== ENCABEZADO ============= */
+
+.encabezado {
+    width: 1128px;
+    max-width: calc(100vw - 34px);
+
+    /* si el banner de arriba queda muy alto, es aqui */
+    height: 272px;
+
+    margin: 0 auto 0 0;
+    position: relative;
+}
+
+.encabezado img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: fill;
+}
+
+
+/* =============== CONTENIDO =========== */
+
+/* OJO CON ESTOS NUMEROS, aca acomode las 2 columnas */
+.contenido {
+    width: 1188px;
+    max-width: calc(100vw - 34px);
+
+    /* el -66px fue necesario para cuadrar el diseño xd */
+    margin: -27px auto 0 -66px;
+
+    display: grid;
+
+    /* izquierda = contenido / derecha = galeria */
+    grid-template-columns: 840px 320px;
+
+    gap: 28px;
+    align-items: start;
+    position: relative;
+}
+
+
+/* ================= PARTE PRINCIPAL ================= */
+
+.contenido-principal {
+    min-height: 1510px;
+
+    /* si quiero mover TODO lo de adentro, revisar este padding o relleno entre el elemento y el borde */
+    padding: 68px 112px 70px 160px;
+
+    position: relative;
+    background-image: url("imagenes/Frame 2.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+
+/* imagen grande de arriba */
+.imagen-principal {
+    width: 568px;
+    height: 320px;
+    overflow: hidden;
+
+    border: 7px solid #32104e;
+
+    /* estas esquinas son asi a proposito, no cambiar sin mirar el diseño */
+    border-radius: 104px 0 104px 0;
+
+    background: #21043b;
+}
+
+.imagen-principal img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+
+/* ============= DESCRIPCION =============== */
+
+/* este es el cuadro de texto debajo de la imagen */
+.descripcion {
+    width: 568px;
+    margin-top: 42px;
+    padding: 14px 42px;
+
+    border: 3px solid #1b0529;
+    border-radius: 32px;
+    background: rgba(60, 0, 85, .55);
+
+    font-size: 22px;
+    line-height: 1.33;
+    text-align: justify;
+}
+
+
+/* las rayitas que separan las secciones */
+.separador {
+    width: 365px;
+    height: 1px;
+    margin: 92px auto 24px;
+    background: rgba(255, 255, 255, .78);
+}
+
+.separador-bajo {
+    margin-top: 56px;
+}
+
+
+/* ============== TITULOS ================= */
+
+.contenido-principal h2 {
+    margin-bottom: 56px;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.05;
+    text-align: center;
+}
+
+
+/* ================ CUADROS DE TEXTO ============== */
+
+/* aca estan los cuadros morados de las caracteristicas */
+.texto-caracteristicas {
+    width: 568px;
+    padding: 16px 20px 22px;
+    margin: 0 auto 22px;
+
+    border: 3px solid #1b0529;
+    border-radius: 32px;
+    background: rgba(72, 0, 97, .52);
+
+    font-size: 21px;
+    line-height: 1.28;
+    text-align: justify;
+}
+
+
+/* este cuadro necesita mas espacio por tener mas texto */
+.texto-largo {
+    min-height: 420px;
+}
+
+.texto-caracteristicas p {
+    margin-bottom: 28px;
+}
+
+.texto-caracteristicas p:last-child {
+    margin-bottom: 0;
+}
+
+.texto-caracteristicas strong {
+    color: #fff;
+}
+
+.texto-caracteristicas ul {
+    padding-left: 30px;
+
+    /* este margen se ve raro pero si lo quito se descuadra */
+    margin: -20px 0 0;
+}
+
+.texto-caracteristicas li {
+    margin-bottom: 2px;
+}
+
+
+/* ================= GALERIA =============== */
+
+/* toda la columna derecha */
+.galeria {
+    min-height: 1510px;
+    margin-top: 37px;
+    padding: 24px 18px 34px;
+
+    border-radius: 42px;
+    background-image: url("imagenes/Rectangle 2.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+
+/* titulo morado de GALERIA */
+.galeria > h2 {
+    height: 40px;
+    margin-bottom: 26px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+    background: rgba(88, 0, 145, .92);
+
+    font-size: 28px;
+    font-weight: 400;
+
+    /* no quitar esto pq el titulo queda feo */
+    letter-spacing: 24px;
+    line-height: 1;
+    text-indent: 24px;
+}
+
+
+.galeria-contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+
+/* tamaño de las imagenes de la galeria */
+.imagen-galeria {
+    width: 280px;
+    height: 177px;
+
+    border-radius: 17px;
+    background: #2b0940;
+    position: relative;
+}
+
+
+/* rayita entre las imagenes */
+.imagen-galeria:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 44px;
+    right: 44px;
+    bottom: -14px;
+    height: 2px;
+    background: rgba(255, 255, 255, .78);
+}
+
+.imagen-galeria img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 17px;
+
+    transition: transform .3s ease;
+}
+
+
+/* efecto cuando paso el mouse, se coloca un poquito mas grande la imagen */
+.imagen-galeria:hover img {
+    transform: scale(1.05);
+}
+
+
+/* ================= VIDEO ================= */
+
+/* bloque grande de abajo, el morado */
+.bloque-inferior {
+    width: 1128px;
+    max-width: calc(100vw - 34px);
+    min-height: 500px;
+
+    margin: 52px auto 0 0;
+    padding: 46px 178px;
+
+    border-radius: 36px;
+    background-image: url("imagenes/Rectangle 4.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+
+/* marco donde va el video */
+.video-marco {
+    width: 780px;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 26px;
+    background: #dedede;
+}
+
+.video-marco video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+
+    transition: transform .3s ease; 
+}
+/*mismo efecto cuando paso el mouse que en las imagenes de la galeria*/
+.video-marco:hover video {
+    transform: scale(1.05);
+}
